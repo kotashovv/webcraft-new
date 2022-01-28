@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Secular+One&display=swap');
@@ -21,7 +22,7 @@
                     <div class="header__menu">
                         <ul class="main-menu">
                             <li class="with-sublist">
-                                <a class="_active" href="#">Услуги</a>
+                                <a class="_active with-sublist-link" href="#">Услуги</a>
                                 <ul class="header__sublist">
                                     <li>
                                         <a href="#">Разработка Сайтов</a>
@@ -62,9 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <video autoplay loop muted class="video-bg" >
-                    <source src="assets/images/video.mp4" type="video/mp4">
-                </video>
+                <video autoplay loop muted class="video-bg" src="assets/images/video.mp4"></video>
             </section>
             <section class="edge">
                 <div class="container">
@@ -98,8 +97,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="clients">
+                <img class="circle-bg-blue parallax" src="assets/images/circle1.png" alt="">
+                <img class="circle-bg-pink parallax" src="assets/images/circle2.png" alt="">
+         </section>
+        <section class="clients">
                 <div class="container">
                     <div class="clients__body">
                         <div class="clients__title">
@@ -107,7 +108,7 @@
                         </div>
                         <ul class="clients__list">
                            <li><img src="assets/images/icons/yago.png" alt=""></li>
-                           <li><img src="assets/images/icons/ingologo.svg" alt=""></li>
+                           <li><img src="assets/images/icons/ingo.png" alt=""></li>
                            <li><img src="assets/images/icons/yapay.png" alt=""></li>
                            <li><img src="assets/images/icons/yandex-delivery1-logo-bl.png" alt=""></li>
                         </ul>
@@ -117,8 +118,8 @@
             <section class="breaker">
                 <div class="container">
                     <div class="breaker__title">
-                        <h3>
-                            Улучшим показатели вашего бизнеса
+                        <h3 class="section-title">
+                            Улучшим показатели вашего <span>бизнеса</span>
                             <div>
                                 <img src="assets/images/icons/dollar-banknote_1f4b5.png" alt="">
                                 <img src="assets/images/icons/dollar-banknote_1f4b5.png" alt="">
@@ -166,8 +167,185 @@
                         </a>
                     </div>
                 </div>
+                <img class="circle-bg-blue parallax" src="assets/images/circle1.png" alt="">
+                <img class="circle-bg-pink parallax" src="assets/images/circle2.png" alt="">
+            </section>
+            <div class="scroll-text">
+                <div class="container">
+                    <div class="marquee-wrapper"> 
+                        <p class="marquee">
+                            О нас говорят • Веб-приложения • Бизнес • Рынок • Разрабокта под ключ • Лидер рынка 
+                        </p>
+                    </div>
+                    <script>
+                        var wrapper = document.querySelector('.marquee-wrapper'),
+                        marquee = document.querySelector('.marquee'),   
+                        wrapperWidth = wrapper.offsetWidth,
+                        marqueeWidth = marquee.scrollWidth;
+                        function move() {
+                        var currentTX = getComputedStyle(marquee).transform.split(',');
+                        if( currentTX[4] === undefined ) {
+                            currentTX = -1;
+                        } else {
+                            currentTX = parseFloat(currentTX[4]) - 1;
+                        }
+                        
+                        if(-currentTX >= marqueeWidth) {
+                            marquee.style.transform = 'translateX(' + wrapperWidth + 'px)';
+                        
+                        } else {
+                            marquee.style.transform = 'translateX(' + currentTX + 'px)';
+                        }
+                        }
+
+                        var interval = setInterval(move, 10);
+                    </script>
+                </div>
+            </div>
+            <section class="feedback">
+                <div class="container">
+                    <div class="feedback__title">
+                        <h2 class="section-title">
+                            Что о нас говорят <span>клиенты</span>
+                            <img src="assets/images/icons/dialog-emoji.png" alt="">
+                        </h2>
+                    </div>
+                    <div class="feedback__body swiper">
+                        <div class="feedback__slider swiper-wrapper">
+                            <div class="feedback__item swiper-slide">
+                                <div class="feedback__header">
+                                    <img src="assets/images/9445bb5d2187e2812c79db70cf.jpg" alt="">
+                                    <p>
+                                        Эрнесто Шмит
+                                    </p>
+                                </div>
+                                <div class="feedback__text">
+                                    <p>
+                                        Всё супер! Обратился для создания Интернет-магазина, несколько дней и всё готово. 
+                                    </p>
+                                </div>
+                                <div class="feedback__total">
+                                    <img src="assets/images/icons/star_2b50.png" alt="">
+                                    <span>5 из 5</span>
+                                </div>
+                            </div>
+                            <div class="feedback__item swiper-slide">
+                                <div class="feedback__header">
+                                    <img src="assets/images/9445bb5d2187e2812c79db70cf.jpg" alt="">
+                                    <p>
+                                        Эрнесто Шмит
+                                    </p>
+                                </div>
+                                <div class="feedback__text">
+                                    <p>
+                                        Всё супер! Обратился для создания Интернет-магазина, несколько дней и всё готово. 
+                                    </p>
+                                </div>
+                                <div class="feedback__total">
+                                    <img src="assets/images/icons/star_2b50.png" alt="">
+                                    <span>5 из 5</span>
+                                </div>
+                            </div>
+                            <div class="feedback__item swiper-slide">
+                                <div class="feedback__header">
+                                    <img src="assets/images/9445bb5d2187e2812c79db70cf.jpg" alt="">
+                                    <p>
+                                        Эрнесто Шмит
+                                    </p>
+                                </div>
+                                <div class="feedback__text">
+                                    <p>
+                                        Всё супер! Обратился для создания Интернет-магазина, несколько дней и всё готово. 
+                                    </p>
+                                </div>
+                                <div class="feedback__total">
+                                    <img src="assets/images/icons/star_2b50.png" alt="">
+                                    <span>5 из 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-comment">
+                        <p>
+                            Это можно свайпать
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="mainform">
+                <div class="container">
+                    <div class="mainform__title">
+                        <h2 class="section-title">
+                            Начать сотрудничать
+                        </h2>
+                        <p>
+                            Сделайте первый шаг к улучшению вашего бизнеса - <br>
+                            Оставьте моментальную заявку ниже
+                        </p>
+                    </div>
+                    <div class="mainform__body">
+                        <form action="#" class="mainform__form">
+                            <label>
+                                <input type="text" placeholder="Ваше имя"> 
+                            </label>
+                            <label>
+                                <input type="text" placeholder="Электронная почта"> 
+                            </label>
+                            <label>
+                                <input type="text" placeholder="Телефон"> 
+                            </label>
+                            <label>
+                                <button type="submit">Отправить</button>
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                <span>Согласен на обработку личных данных</span>
+                            </label>
+                        </form>
+                        <div class="mainform__info">
+                            <p>
+                                Или напишите нам сами: 
+                            </p>
+                            <a href="#">
+                                start@webcraftic.com
+                            </a>
+                            <a href="#">Telegram</a>
+                            <a href="#">WhatsApp</a>
+                            <a href="#">ВКонтакте</a>
+                            <a href="#">+7 800 500 05 05</a>
+                        </div>
+                    </div>
+                </div>
+                <img class="circle-bg-blue parallax" src="assets/images/circle1.png" alt="">
+                <img class="circle-bg-pink parallax" src="assets/images/circle2.png" alt="">
             </section>
         </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__body">
+                    <div class="footer__logo">
+                        <h1>
+                            <a href="#">Web<span>Craftic</span></a>
+                        </h1>
+                        <p>
+                            Все права защищены
+                        </p>
+                    </div>
+                    <div class="footer__copy">
+                       2022
+                    </div>
+                    <div class="footer__menu">
+                        <ul>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Разработка сайтов</a></li>
+                            <li><a href="#">Разработка плагинов</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="assets/libs/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>
