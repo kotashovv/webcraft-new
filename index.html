@@ -43,11 +43,28 @@
                         <a href="#"><img src="assets/images/icons/vk.png" alt=""></a>
                     </div>
                     <div class="header__action">
-                        <a class="main-btn" href="#">Get Started</a>
+                        <a class="main-btn" href="#">Поддержка</a>
+                    </div>
+                    <div class="header__button">
+                        <button class="call-menu"><span></span></button>
                     </div>
                 </div>
             </div>
         </header>
+        <div class="mobile-header">
+            <ul>
+                <li><a href="#">Разработка Сайтов</a></li>
+                <li><a href="#">Разработка Плагинов</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">База знаний</a></li>
+                <li><a class="main-btn" href="#">Поддержка</a></li>
+            </ul>
+            <div class="mobile-header__social">
+                <a href="#"><img src="assets/images/icons/insta.png" alt=""></a>
+                <a href="#"><img src="assets/images/icons/teleg.png" alt=""></a>
+                <a href="#"><img src="assets/images/icons/vk.png" alt=""></a>
+            </div>
+        </div>
         <main class="main">
             <section class="welcome">
                 <div class="container">
@@ -177,29 +194,7 @@
                             О нас говорят • Веб-приложения • Бизнес • Рынок • Разрабокта под ключ • Лидер рынка 
                         </p>
                     </div>
-                    <script>
-                        var wrapper = document.querySelector('.marquee-wrapper'),
-                        marquee = document.querySelector('.marquee'),   
-                        wrapperWidth = wrapper.offsetWidth,
-                        marqueeWidth = marquee.scrollWidth;
-                        function move() {
-                        var currentTX = getComputedStyle(marquee).transform.split(',');
-                        if( currentTX[4] === undefined ) {
-                            currentTX = -1;
-                        } else {
-                            currentTX = parseFloat(currentTX[4]) - 1;
-                        }
-                        
-                        if(-currentTX >= marqueeWidth) {
-                            marquee.style.transform = 'translateX(' + wrapperWidth + 'px)';
-                        
-                        } else {
-                            marquee.style.transform = 'translateX(' + currentTX + 'px)';
-                        }
-                        }
 
-                        var interval = setInterval(move, 10);
-                    </script>
                 </div>
             </div>
             <section class="feedback">
